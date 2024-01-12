@@ -1,17 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import {Home} from './components/Home';
-import{Dashboard} from './compoents/Dashboard';
-import{Maintenance} from './components/Maintenance';
-import{Trip} from './components/Trip';
+import {Home} from './containers/Home.jsx';
+import{Dashboard} from './containers/Dashboard.jsx';
+import{Maintenance} from './containers/Maintenance.jsx';
+import{Trip} from './containers/Trip.jsx';
 import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Dashboard" component={Dashboard} />
+        <Tab.Screen name="Maintenance" component={Maintenance} />
+        <Tab.Screen name="Trip" component={Trip} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 

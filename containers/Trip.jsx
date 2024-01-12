@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { StyleSheet, Text, View } from 'react-native';
 
 const Trip = () => {
     return(
-        <div>
+        <Text>
             Trip Page
-        </div>
-    )
+        </Text>
+    );
 }
 
 
-export default Trip;
+export {Trip}

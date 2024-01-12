@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { StyleSheet, Text, View } from 'react-native';
 
 const Dashboard = () => {
     return(
-        <div>
+        <Text>
             Dashboard Page
-        </div>
-    )
+        </Text>
+    );
 }
 
 
-export default Dashboard;
+export { Dashboard };

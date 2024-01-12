@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { StyleSheet, Text, View } from 'react-native';
 
 const Maintenance = () => {
     return(
-        <div>
+        <Text>
             Maintenance Page
-        </div>
-    )
+        </Text>
+    );
 }
 
 
-export default Maintenance;
+export {Maintenance};
